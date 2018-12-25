@@ -13,7 +13,7 @@
 
 - (void)addRefreshWithBlock:(MJRefreshComponentRefreshingBlock)refreshingBlock {
     
-    self.mj_header = [MZRefreshHeader headerWithRefreshingBlock:refreshingBlock];
+    self.mj_header = [MZRefreshHeader1 headerWithRefreshingBlock:refreshingBlock];
 
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import "MZRefreshHeader.h"
+#import <Lottie/Lottie.h>
 
 @interface MZRefreshHeader ()
 
@@ -53,7 +54,7 @@
 
 - (void)placeSubviews {
     [super placeSubviews];
-    self.bgLogoView.center = CGPointMake(self.mj_w / 2.0, self.mj_h / 2.0 + 12);
+    self.bgLogoView.center = CGPointMake(self.mj_w / 2.0, self.mj_h / 2.0 - 12);
     self.logoView.frame = self.bgLogoView.bounds = CGRectMake(0, 0, self.bgWidth, self.bgHeight);
     self.logoView.maskView = self.maskView;
  }
@@ -195,6 +196,83 @@
     return _maskRectLayer;
 }
 
+@end
 
+@interface MZRefreshHeader1()
+
+@property (nonatomic, strong) LOTAnimationView *logoView;
+@property (nonatomic, strong) UILabel *titleLabel;
 
 @end
+
+@implementation MZRefreshHeader1
+- (void)prepare {
+    [super prepare];
+
+    self.mj_h = 70;
+    
+    [self addSubview:self.logoView];
+    [self addSubview:self.titleLabel];
+}
+
+- (void)placeSubviews {
+    [super placeSubviews];
+    self.logoView.center = CGPointMake(self.mj_w / 2.0, self.mj_h / 2.0 - 10);
+    self.titleLabel.center = CGPointMake(self.mj_w / 2.0, 0);
+    self.titleLabel.mj_y = CGRectGetMaxY(self.logoView.frame) + 10;
+}
+
+- (void)setState:(MJRefreshState)state {
+    MJRefreshCheckState;
+    switch (state) {
+        case MJRefreshStateIdle:
+        {
+            [self.logoView stop];
+            self.logoView.animationProgress = 0;
+        }
+            
+            break;
+        case MJRefreshStatePulling:
+        {
+//            [self.logoView stop];
+        }
+            break;
+        case MJRefreshStateRefreshing:
+        {
+            [self.logoView play];
+        }
+            break;
+        default:
+            break;
+    }
+}
+
+
+- (void)setPullingPercent:(CGFloat)pullingPercent {
+    if (pullingPercent > 1) {
+        self.titleLabel.text = @"释放刷新";
+    } else {
+        self.titleLabel.text = @"下拉刷新";
+    }
+}
+
+- (LOTAnimationView *)logoView {
+    if (!_logoView) {
+        _logoView = [LOTAnimationView animationNamed:@"data"];
+        _logoView.bounds = CGRectMake(0, 0, 35, 35);
+        _logoView.loopAnimation = true;
+    }
+    return _logoView;
+}
+
+- (UILabel *)titleLabel {
+    if (!_titleLabel) {
+        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 150, 14)];
+        _titleLabel.font = [UIFont systemFontOfSize:14];
+        _titleLabel.textColor = [UIColor lightGrayColor];
+        _titleLabel.textAlignment = NSTextAlignmentCenter;
+    }
+    return _titleLabel;
+}
+@end
+

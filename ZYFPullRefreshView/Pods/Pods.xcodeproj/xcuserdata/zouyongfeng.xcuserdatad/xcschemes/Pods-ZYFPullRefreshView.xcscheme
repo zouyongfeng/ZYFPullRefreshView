@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '86C3F9E5E3FFA81476BFAB051DC94327'
+               BlueprintIdentifier = '9E1E10694C76DF755163725A858987F8'
                BlueprintName = 'Pods-ZYFPullRefreshView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-ZYFPullRefreshView.a'>

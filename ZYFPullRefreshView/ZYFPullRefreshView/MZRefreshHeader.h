@@ -12,3 +12,8 @@
 @interface MZRefreshHeader : MJRefreshHeader
 
 @end
+
+
+@interface MZRefreshHeader1 : MJRefreshHeader
+
+@end

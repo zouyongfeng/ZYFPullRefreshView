@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1543C8D371AD81955A7F1B49 /* libPods-ZYFPullRefreshViewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBE075C4C6A38AA1424558F3 /* libPods-ZYFPullRefreshViewTests.a */; };
+		6A1F5C3B1FB0544A00D31404 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 6A1F5C3A1FB0544500D31404 /* data.json */; };
 		6A49732E1F45896B001190E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A49732D1F45896B001190E2 /* main.m */; };
 		6A4973311F45896B001190E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A4973301F45896B001190E2 /* AppDelegate.m */; };
 		6A4973341F45896B001190E2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A4973331F45896B001190E2 /* ViewController.m */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		44659961106FAFE41B12DB9D /* Pods-ZYFPullRefreshViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZYFPullRefreshViewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZYFPullRefreshViewTests/Pods-ZYFPullRefreshViewTests.release.xcconfig"; sourceTree = "<group>"; };
+		6A1F5C3A1FB0544500D31404 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		6A4973291F45896B001190E2 /* ZYFPullRefreshView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYFPullRefreshView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A49732D1F45896B001190E2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6A49732F1F45896B001190E2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				6A4973301F45896B001190E2 /* AppDelegate.m */,
 				6A4973321F45896B001190E2 /* ViewController.h */,
 				6A4973331F45896B001190E2 /* ViewController.m */,
+				6A1F5C3A1FB0544500D31404 /* data.json */,
 				6A4973351F45896B001190E2 /* Main.storyboard */,
 				6A4973381F45896B001190E2 /* Assets.xcassets */,
 				6A49733A1F45896B001190E2 /* LaunchScreen.storyboard */,
@@ -317,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A49733C1F45896B001190E2 /* LaunchScreen.storyboard in Resources */,
+				6A1F5C3B1FB0544A00D31404 /* data.json in Resources */,
 				6A4973391F45896B001190E2 /* Assets.xcassets in Resources */,
 				6A4973371F45896B001190E2 /* Main.storyboard in Resources */,
 				6A4973681F4596AA001190E2 /* gray.png in Resources */,
@@ -347,13 +351,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZYFPullRefreshView-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		47DBF2FC6E9BD06259622F42 /* [CP] Check Pods Manifest.lock */ = {
@@ -362,13 +369,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZYFPullRefreshViewUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4CDD449EFF0396D5ED784666 /* [CP] Embed Pods Frameworks */ = {
@@ -422,13 +432,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZYFPullRefreshViewTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C05315F50F3A59042C3B0D5B /* [CP] Copy Pods Resources */ = {
@@ -452,9 +465,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ZYFPullRefreshView/Pods-ZYFPullRefreshView-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
